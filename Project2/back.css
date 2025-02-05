@@ -13,9 +13,12 @@ body{
     text-align: center;
 }
 
-input {
+.inputs {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .inputs input {
