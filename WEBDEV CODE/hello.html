@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEY!</title>
+    <style>
+        p{
+            color: yellow; background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h6>hey okay this is me.</h6>
+    <h1>hey okay this is me.</h1>
+    <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate aliquam blanditiis earum, nobis fugit
+        cumque nesciunt! Ex sapiente, voluptatum debitis voluptates laboriosam ratione dolor harum iste mollitia omnis
+        accusantium nobis quae dolore, rem distinctio temporibus! Rem quas quod corrupti non!</p>
+
+    <!-- LINK-->
+    <a href="https://google.com" target="_blank"> Google link</a> <br>
+    <a href="https://facebook.com" target="_blank"> Fb link</a> <br>
+    <a href="https:// twitter.com" target="_blank"> Tw link</a> <br>
+
+    <!-- IMAGES-->
+    <!-- if image not present alt text will be shown-->
+    <img src="CCPA.png" alt="Error loading image">
+
+    <!-- LISTS-->
+    <ul type="square">
+        <li> Hey this is me </li>
+        <li> Hey this is not me </li>
+        <ol type="i"> <!-- Nesting of lists-->
+            <li>first</li>
+            <li>second</li>
+        </ol>
+    </ul>
+    <ol type="a">
+        <li> Hey this is me </li>
+        <li> Hey this is not me </li>
+    </ol>
+
+    <!--TABLES-->
+    <table>
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Employee Id </th>
+                <th> Roles </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> Aditi </td>
+                <td> 3456 </td>
+                <td> Manager </td>
+            </tr>
+            <tr>
+                <td> Kavin </td>
+                <td> 3896 </td>
+                <td> Designer </td>
+            </tr>
+            <tr>
+                <td> Tanya </td>
+                <td> 4567 </td>
+                <td> Programmer </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <!--FORMS-->
+    <form action="backend.php">
+        <label for="name"> Name: </label>
+        <input type="text" name="myName" id="name"><br>
+        <br>
+        <div>
+            Role: <input type="text">
+        </div>
+        <br> <!-- div recopmmended over br , rest spacing and all given using css-->
+        <div>
+            Email: <input type="email" name="myEmail">
+        </div>
+        <br>
+        <div>
+            Date: <input type="date">
+        </div><br>
+        <div>
+            Salary: <input type="number">
+        </div><br>
+        <div>
+            Age: <input type="number"> <!-- number accepts 'e' also along with numbers for showing powers-->
+        </div><br>
+        <div>
+            Eligibility: <input type="checkbox">
+        </div><br>
+        <div>
+            Gender: Male <input type="radio" name="MyGender">Female <input type="radio" name="MyGender">
+        </div><br>
+        <div>
+            Describhe yourself:<br> <textarea name="myText" cols="30" rows="10"></textarea>
+        </div><br>
+        <div>
+            <label for="car">Car</label>
+            <select name="myCar" id="car">
+                <option value="audi">Audi</option>
+                <option value="bmw" selected>BMW</option>
+            </select>
+        </div><br>
+
+        <input type="submit" value="Submit Now">
+        <input type="reset" value="Reset Data"><br>
+
+    </form>
+
+
+    <!-- Inline and Block elements-->
+    <span>hello </span>
+    <span>hello </span>
+    <span>hello </span>
+    <span> this is a paragraph.</span>
+    <span> this is a paragraph.</span>
+    <span> this is a paragraph.</span>
+    <span> this is a paragraph.</span>
+
+
+    <!-- ids and classes in htlm-->
+    <div id="main" class="redbg blackbrdr"> this is mainbox </div>
+    <!-- class can be used / given in multiple elements but id is unique for each element-->
+
+    <!-- 
+        '.' is used to represent class and 
+        '#' is used for id
+    -->
+    <span class="redBG"></span>
+    <div class="redbg blackbrdr anotherclass"></div>
+    <!-- emmet takes div class as default -->
+
+    <div class="blackbg"></div>
+    <!-- creating multiple elements using emmet -->
+    <!-- shortcut used: span.myclass.and so on + <Tab> -->
+
+    <span class="myclass myclass21 myclass2">first</span>
+    <span class="myclass myclass21 myclass2">second</span>
+    <span class="myclass myclass21 myclass2">third</span>
+    <span class="myclass myclass21 myclass2">fourth</span>
+
+    <span class="myclass3 myclass4">first</span>
+    <span class="myclass3 myclass4">second</span>
+    <span class="myclass3 myclass4">third</span>
+    <br>
+
+    <div class="container">
+        <p>this is a paragraph</p>
+    </div>
+    <div class="container">
+        <p>this is &nbsp;&nbsp;&nbsp;&nbsp; also&nbsp;&nbsp;&nbsp;&nbsp; a paragraph like &lt;p&gt;</p>
+        <p> &pound; </p>
+        <p> &copy; </p>
+        <!-- blank character -->
+        <p> &#8203;&#8203;&#8203;&#8203;&#8203;&#8203;</p> 
+        <p> &yen; </p>
+        
+
+    </div>
+
+    <img src="entities.png" alt="xyz" height="300" width="800">
+
+     <details>
+        <summary>
+            heyyyyyy!ugeyfdygbfjdrdgfWYGF
+            HDGYWGFJWGGFIUKF
+            AHWGAFYSFJUGAIUKFW
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut labore, itaque voluptas vitae nobis reiciendis totam praesentium architecto nulla cumque laboriosam perferendis necessitatibus, sed porro animi alias sunt? Amet, doloribus. Lorem ipsum dolor sit amet, consectetur 
+     </details>
+
+     <p style="color:red;"> tutorial for css </p> <!-- inline css-->
+     <h3>hgedgseyjwvtej</h3>
+
+</body>
+
+</html>
