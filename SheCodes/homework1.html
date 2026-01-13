@@ -1,121 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                Roboto, Helvetica, Arial, sans-serif;
-            background: #ffffff;
-            color: #000;
-            text-align: center;
-        }
+  <meta charset="UTF-8" />
+  <title>Weather App</title>
 
-        .container {
-            max-width: 420px;
-            margin: 0 auto;
-            padding: 40px 20px 30px;
-        }
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      text-align: center;
+      margin: 0;
+      padding: 40px 0;
+    }
 
-        .icon {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
 
-        h1 {
-            font-size: 36px;
-            font-weight: 600;
-            color: #3b63d9;
-            margin: 10px 0;
-        }
+    .icon {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
 
-        .today-temp {
-            font-size: 48px;
-            font-weight: 600;
-            margin: 10px 0 30px;
-        }
+    h1 {
+      color: #3b63d9;
+      font-size: 36px;
+      margin: 10px 0;
+      font-weight: 600;
+    }
 
-        .forecast {
-            margin: 30px 0;
-        }
+    .today {
+      font-size: 44px;
+      font-weight: 600;
+      margin: 15px 0 40px;
+    }
 
-        .day {
-            margin: 35px 0;
-        }
+    .day {
+      margin: 30px 0;
+    }
 
-        .day-name {
-            font-size: 22px;
-            font-weight: 600;
-        }
+    .day-name {
+      font-size: 22px;
+      font-weight: 600;
+    }
 
-        .day-temp {
-            font-size: 26px;
-            color: #555;
-            margin-top: 8px;
-        }
+    .day-temp {
+      font-size: 26px;
+      color: #555555;
+      margin-top: 6px;
+    }
 
-        .button {
-            display: inline-block;
-            margin: 40px 0 30px;
-            padding: 18px 40px;
-            background: #3b63d9;
-            color: #ffffff;
-            font-size: 20px;
-            border-radius: 40px;
-            text-decoration: none;
-            box-shadow: 0 8px 20px rgba(59, 99, 217, 0.3);
-            transition: all 0.3s ease;
-        }
+    .button {
+      display: block;
+      margin: 40px auto 30px;
+      padding: 18px 40px;
+      background: #3b63d9;
+      color: #ffffff;
+      font-size: 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(59, 99, 217, 0.3);
+      transition: all 200ms ease;
+    }
 
-        .button:hover {
-            background: #2f4fc4;
-            color: #ffffff;
-            box-shadow: 0 12px 28px rgba(59, 99, 217, 0.45);
-            transform: translateY(-3px);
-            text-decoration: none;
-        }
+    .button:hover {
+      background: #2f4fc4;
+      box-shadow: 0 12px 28px rgba(59, 99, 217, 0.45);
+      transform: translateY(-3px);
+    }
 
-        .footer {
-            font-size: 18px;
-            color: #666;
-            margin-top: 10px;
-        }
-    </style>
+    .footer {
+      color: #666666;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="icon">🌤️</div>
+  <div class="container">
+    <div class="icon">🌤️</div>
 
-        <h1>Currently 21° in Tokyo</h1>
+    <h1>Currently 21° in Tokyo</h1>
 
-        <div class="today-temp">13° / 23°</div>
+    <div class="today">13° / 23°</div>
 
-        <div class="forecast">
-            <div class="day">
-                <div class="day-name">🌧️ Tomorrow</div>
-                <div class="day-temp">10° / 22°</div>
-            </div>
-
-            <div class="day">
-                <div class="day-name">🌥️ Saturday</div>
-                <div class="day-temp">15° / 17°</div>
-            </div>
-
-            <div class="day">
-                <div class="day-name">☀️ Sunday</div>
-                <div class="day-temp">25° / 28°</div>
-            </div>
-        </div>
-
-        <a href="#" class="button">Change city</a>
-
-        <div class="footer">Coded by Matt Delac</div>
+    <div class="day">
+      <div class="day-name">🌧️ Tomorrow</div>
+      <div class="day-temp">10° / 22°</div>
     </div>
-</body>
 
+    <div class="day">
+      <div class="day-name">🌥️ Saturday</div>
+      <div class="day-temp">15° / 17°</div>
+    </div>
+
+    <div class="day">
+      <div class="day-name">☀️ Sunday</div>
+      <div class="day-temp">25° / 28°</div>
+    </div>
+
+    <a href="#" class="button">Change city</a>
+
+    <div class="footer">Coded by Matt Delac</div>
+  </div>
+</body>
 </html>
