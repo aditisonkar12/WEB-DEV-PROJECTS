@@ -9,14 +9,16 @@
 
 <body>
     <script>
-        let hometown = prompt("What is your hometown?");
-        alert(hometown);
+  let age = prompt("How old are you?");
 
-        let firstName = prompt("What is your first name?");
-        let lastName = prompt("What is your last name?");
-        alert(firstName + " " + lastName);
-    </script>
+  if (age < 18) {
+    alert("You cannot apply");
+  }
 
+  if (age >= 18) {
+    alert("You can apply to SheCodes");
+  }
+</script>
 </body>
 
 </html>
