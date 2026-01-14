@@ -26,13 +26,12 @@
         }
 
         h1 {
-  color: #3b63d9;
-  font-size: 36px;
-  margin: 10px 0;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
+            color: #3b63d9;
+            font-size: 36px;
+            margin: 10px 0;
+            font-weight: 600;
+            white-space: nowrap;
+        }
 
         .today {
             font-size: 44px;
@@ -126,25 +125,25 @@
     </div>
 
     <script>
-  function changeCity() {
-    let city = prompt("What city do you live in?");
-    let temperature = prompt("What temperature is it?");
+        function changeCity() {
+            let city = prompt("What city do you live in?");
+            let temperature = prompt("What temperature is it?");
 
-    let heading = document.querySelector("h1");
-    let icon = document.querySelector(".icon");
+            let heading = document.querySelector("h1");
+            let icon = document.querySelector(".icon");
 
-    heading.innerHTML = `Currently ${temperature}°C in ${city}`;
+            heading.innerHTML = `Currently ${temperature}°C in ${city}`;
 
-    if (temperature >= 15) {
-      icon.innerHTML = "😊";
-    } else {
-      icon.innerHTML = "🥶";
-    }
-  }
+            if (temperature >= 15) {
+                icon.innerHTML = "😊";
+            } else {
+                icon.innerHTML = "🥶";
+            }
+        }
 
-  let button = document.querySelector(".button");
-  button.addEventListener("click", changeCity);
-</script>
+        let button = document.querySelector(".button");
+        button.addEventListener("click", changeCity);
+    </script>
 
 </body>
 
