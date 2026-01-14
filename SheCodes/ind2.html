@@ -9,22 +9,22 @@
 
 <body>
     <script>
-  function applyNow() {
-    let firstName = prompt("What is your first name?");
-    let age = prompt("How old are you?");
+        function applyNow() {
+            let firstName = prompt("What is your first name?");
+            let age = prompt("How old are you?");
 
-    if (age >= 18) {
-      document.querySelector("h1").innerHTML =
-        "Hi, " + firstName + "! Welcome to SheCodes !";
-    } else {
-      document.querySelector("h1").innerHTML =
-        "Sorry, " + firstName + "! You cannot join SheCodes";
-    }
-  }
+            if (age >= 18) {
+                document.querySelector("h1").innerHTML =
+                    "Hi, " + firstName + "! Welcome to SheCodes !";
+            } else {
+                document.querySelector("h1").innerHTML =
+                    "Sorry, " + firstName + "! You cannot join SheCodes";
+            }
+        }
 
-  let button = document.querySelector(".apply-button");
-  button.addEventListener("click", applyNow);
-</script>
+        let button = document.querySelector(".apply-button");
+        button.addEventListener("click", applyNow);
+    </script>
 
 </body>
 
