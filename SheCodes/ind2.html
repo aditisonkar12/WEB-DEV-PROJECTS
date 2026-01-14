@@ -9,18 +9,15 @@
 
 <body>
     <script>
-        let hour = prompt("What is the current hour?");
+  let country = prompt("What country are you from?");
+  country = country.toLowerCase();
 
-        if (hour < 12) {
-            alert("Good morning");
-        } else {
-            if (hour > 18) {
-                alert("Good evening");
-            } else {
-                alert("Good afternoon");
-            }
-        }
-    </script>
+  if (country === "brazil" || country === "portugal") {
+    alert("You speak Portuguese");
+  } else {
+    alert("You don't speak Portuguese");
+  }
+</script>
 </body>
 
 </html>
