@@ -9,18 +9,23 @@
 
 <body>
     <script>
-        function askForCountry() {
-            let country = prompt("What country are you from?");
-            country = country.toLowerCase();
+  function applyNow() {
+    let firstName = prompt("What is your first name?");
+    let age = prompt("How old are you?");
 
-            if (country === "brazil" || country === "portugal") {
-                alert("You speak Portuguese");
-            } else {
-                alert("Go learn Portuguese!");
-            }
-        }
-        askForCountry();
-    </script>
+    if (age >= 18) {
+      document.querySelector("h1").innerHTML =
+        "Hi, " + firstName + "! Welcome to SheCodes !";
+    } else {
+      document.querySelector("h1").innerHTML =
+        "Sorry, " + firstName + "! You cannot join SheCodes";
+    }
+  }
+
+  let button = document.querySelector(".apply-button");
+  button.addEventListener("click", applyNow);
+</script>
+
 </body>
 
 </html>
