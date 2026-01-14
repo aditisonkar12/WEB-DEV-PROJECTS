@@ -122,6 +122,28 @@
 
         <div class="footer">Coded by Aditi Sonkar</div>
     </div>
+
+    <script>
+  function changeCity() {
+    let city = prompt("What city do you live in?");
+    let temperature = prompt("What temperature is it?");
+
+    let heading = document.querySelector("h1");
+    let icon = document.querySelector(".icon");
+
+    heading.innerHTML = `Currently ${temperature}°C in ${city}`;
+
+    if (temperature >= 15) {
+      icon.innerHTML = "😊";
+    } else {
+      icon.innerHTML = "🥶";
+    }
+  }
+
+  let button = document.querySelector(".button");
+  button.addEventListener("click", changeCity);
+</script>
+
 </body>
 
 </html>
