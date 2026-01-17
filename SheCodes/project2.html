@@ -8,84 +8,84 @@
 
     <style>
         body {
-        margin: 0;
-        padding: 30px;
-        font-family: Arial, sans-serif;
-        background: #ffffff;
-        color: #000000;
-        transition: background 300ms ease, color 300ms ease;
-      }
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #000000;
+            transition: background 300ms ease, color 300ms ease;
+        }
 
-      .dark {
-        background: #000000;
-        color: #ffffff;
-      }
+        .dark {
+            background: #000000;
+            color: #ffffff;
+        }
 
-      button {
-        padding: 8px 14px;
-        font-size: 14px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        background: #000000;
-        color: #ffffff;
-        transition: all 200ms ease;
-      }
+        button {
+            padding: 8px 14px;
+            font-size: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #000000;
+            color: #ffffff;
+            transition: all 200ms ease;
+        }
 
-      .dark button {
-        background: #ffffff;
-        color: #000000;
-      }
+        .dark button {
+            background: #ffffff;
+            color: #000000;
+        }
 
-      h1 {
-        margin-top: 20px;
-        font-size: 36px;
-      }
+        h1 {
+            margin-top: 20px;
+            font-size: 36px;
+        }
 
-      h2 {
-        font-size: 20px;
-        font-weight: normal;
-        margin-bottom: 20px;
-      }
+        h2 {
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
 
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        margin-bottom: 20px;
-      }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
 
-      .gallery img {
-        width: 100%;
-        border-radius: 6px;
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        transition: transform 200ms ease;
-      }
+        .gallery img {
+            width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 200ms ease;
+        }
 
-      .gallery img:hover {
-        transform: scale(1.03);
-      }
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
 
-      p {
-        line-height: 1.6;
-        max-width: 900px;
-        font-size: 14px;
-      }
+        p {
+            line-height: 1.6;
+            max-width: 900px;
+            font-size: 14px;
+        }
 
-      a {
-        color: #7c3aed;
-        text-decoration: none;
-        font-weight: bold;
-      }
+        a {
+            color: #7c3aed;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-      a:hover {
-        text-decoration: underline;
-      }
+        a:hover {
+            text-decoration: underline;
+        }
 
-      .footer {
-        margin-top: 10px;
-        font-size: 13px;
-      }
+        .footer {
+            margin-top: 10px;
+            font-size: 13px;
+        }
     </style>
 </head>
 
@@ -108,31 +108,33 @@
             alt="Couple dancing" />
     </div>
 
-        <p>
-            <strong>Salsa</strong> is a Latin dance, associated with the music genre
-            of the same name, which was first popularized in the United States in the
-            1960s in New York City. Salsa is an amalgamation of Cuban dances, such as
-            mambo, pachanga and rumba, as well as American dances such as swing and
-            tap.
-        </p>
+    <p>
+        <strong>Salsa</strong> is a Latin dance, associated with the music genre
+        of the same name, which was first popularized in the United States in the
+        1960s in New York City. Salsa is an amalgamation of Cuban dances, such as
+        mambo, pachanga and rumba, as well as American dances such as swing and
+        tap.
+    </p>
 
-        <a href="https://en.wikipedia.org/wiki/Salsa_(dance)" target="_blank">
-            Learn Salsa
-        </a>
+    <a href="https://en.wikipedia.org/wiki/Salsa_(dance)" target="_blank">
+        Learn Salsa
+    </a>
 
-        <span>
-            Coded with ❤️ by <a href="#">Aditi Sonkar</a>
-        </span>
+    <div class="footer"></div>
+    <span>
+        Coded with ❤️ by <a href="#">Aditi Sonkar</a>
+    </span>
+    </div>
+    
+    <script>
+        let button = document.querySelector("#themeButton");
+        let body = document.querySelector("body");
 
-        <script>
-      let button = document.querySelector("#themeButton");
-      let body = document.querySelector("body");
+        function toggleTheme() {
+            body.classList.toggle("dark");
+        }
 
-      function toggleTheme() {
-        body.classList.toggle("dark");
-      }
-
-      button.addEventListener("click", toggleTheme);
+        button.addEventListener("click", toggleTheme);
     </script>
 </body>
 
