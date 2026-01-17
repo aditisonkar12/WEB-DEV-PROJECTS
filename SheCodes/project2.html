@@ -9,11 +9,10 @@
     <style>
         body {
             margin: 0;
-            padding: 30px;
+            padding: 40px 0;
             font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #000000;
-            transition: background 300ms ease, color 300ms ease;
+            background: linear-gradient(135deg, #f7c6e6, #e6d9ff);
+            transition: background 300ms ease;
         }
 
         .dark {
@@ -145,7 +144,9 @@
 </head>
 
 <body>
-    <button class="theme" id="themeBtn">Dark theme</button>
+    <div class="theme-toggle">
+        <button id="dark-btn">Dark theme</button>
+    </div>
 
     <div class="card">
         <h1>💃 What is Salsa?</h1>
