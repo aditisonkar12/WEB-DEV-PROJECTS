@@ -150,9 +150,12 @@
         <h1>💃 What is Salsa?</h1>
         <h2>My favorite type of dance</h2>
 
-        <div class="gallery">
-            <img src="https://images.unsplash.com/photo-1555489401-79c274997434?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Couple dancing salsa" />
+        <img class="main-img"
+            src="https://images.unsplash.com/photo-1555489401-79c274997434?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Salsa dance" />
+
+        <div class="grid-gallery">
+            <img src="" alt="Couple dancing salsa" />
             <img src="https://images.unsplash.com/photo-1635164416977-192869952a6f?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Couple dancing salsa" />
             <img src="https://images.unsplash.com/photo-1542892770-3e6a09c7a7da?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -164,11 +167,8 @@
         </div>
 
         <p>
-            <strong>Salsa</strong> is a Latin dance, associated with the music genre
-            of the same name, which was first popularized in the United States in the
-            1960s in New York City. Salsa is an amalgamation of Cuban dances, such as
-            mambo, pachanga and rumba, as well as American dances such as swing and
-            tap.
+            <strong>Salsa</strong> is a Latin dance associated with the music genre of the
+            same name. It was popularized in the United States in the 1960s in New York City.
         </p>
 
         <a href="https://en.wikipedia.org/wiki/Salsa_(dance)" target="_blank">
@@ -183,11 +183,9 @@
     </div>
 
     <script>
-        let button = document.querySelector("#dark-btn");
-        let body = document.querySelector("body");
-
-        button.addEventListener("click", function () {
-            body.classList.toggle("dark");
+        const btn = document.querySelector("#dark-btn");
+        btn.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
         });
     </script>
 </body>
