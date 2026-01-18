@@ -41,6 +41,31 @@
       color: black;
     }
 
+    .card {
+      width: 360px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      padding: 20px;
+      animation: slideUp 800ms ease;
+    }
+
+    body.dark .card {
+      background: #111;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
         button.theme {
             position: fixed;
             top: 15px;
