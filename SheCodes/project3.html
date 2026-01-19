@@ -4,70 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favourite Hobby</title>
+    <title>Favourite Hobby - Painting</title>
 
     <style>
         body {
             margin: 0;
-            font-family: "Segoe UI", sans-serif;
-            background: linear-gradient(135deg, #fde2ff, #e0f2fe);
-            transition: background 0.4s ease, color 0.4s ease;
-            justify-content: center;
             padding: 40px 0;
-            padding-top: 80px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f7c6e6, #e6d9ff);
+            transition: background 300ms ease;
         }
 
         body.dark {
-            background: radial-gradient(circle at top, #243b55, #141e30);
-            color: #e5e7eb;
+            background: linear-gradient(135deg, #1f2a44, #2e3b66);
+            color: #fff;
         }
 
-        .theme-wrapper {
+        .theme-toggle {
             display: flex;
             justify-content: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
-        .theme-btn {
-            padding: 10px 18px;
+        #dark-btn {
+            padding: 8px 18px;
+            font-size: 14px;
             border-radius: 20px;
             border: none;
-            background: #000;
-            color: #fff;
-            font-size: 14px;
+            background: black;
+            color: white;
             cursor: pointer;
-            transition: transform 0.3s ease;
         }
 
-        .theme-btn:hover {
-            transform: scale(1.05);
-        }
-
-        body.dark .theme-btn {
-            background: #fff;
-            color: #111;
-        }
-
-        .card-wrapper {
-            display: flex;
-            justify-content: center;
+        body.dark #dark-btn {
+            background: white;
+            color: black;
         }
 
         .card {
-            width: 340px;
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 22px;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
-            transition: background 0.4s ease;
+            width: 360px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #ffe0f3, #d8c6f9);
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            padding: 20px;
+            animation: slideUp 800ms ease;
         }
 
         body.dark .card {
-            background: linear-gradient(160deg, #1e293b, #0f172a);
+            background: linear-gradient(135deg,
+                    rgba(40, 55, 90, 0.95),
+                    rgba(25, 35, 65, 0.95));
+            color: #f1f5f9;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         h1 {
             text-align: center;
+            font-size: 22px;
             margin-bottom: 5px;
         }
 
@@ -75,142 +81,146 @@
             text-align: center;
             font-size: 14px;
             font-weight: normal;
-            opacity: 0.8;
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
-        .main-image {
-            width: 100%;
-            border-radius: 14px;
-            margin-bottom: 18px;
-            transition: transform 0.35s ease, box-shadow 0.35s ease;
-        }
-
-        .main-image:hover {
-            transform: scale(1.06);
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
-        }
-
-        .gallery {
+        .grid-gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 14px;
-            margin: 20px 0;
-            overflow: visible;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-bottom: 15px;
         }
 
-        .gallery img {
+        .grid-gallery img {
             width: 100%;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 12px;
-            transition: transform 300ms ease, box-shadow 300ms ease;
-            cursor: pointer;
-            position: relative;
-            z-index: 1;
+            border-radius: 6px;
+            transition: transform 200ms ease;
         }
 
-        .gallery img:hover {
-            transform: scale(1.08);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-            z-index: 10;
-        }
-
-        .gallery .main-img {
-            grid-column: span 2;
-            height: 320px;
+        .grid-gallery img:hover {
+            transform: scale(1.05);
         }
 
         p {
-            font-size: 13px;
-            line-height: 1.6;
-            margin-bottom: 12px;
+            font-size: 12px;
+            line-height: 1.5;
+            margin-top: 10px;
         }
 
         a {
-            color: #7c3aed;
+            display: inline-block;
+            margin-top: 10px;
+            color: #6d28d9;
             font-weight: bold;
-            font-size: 13px;
             text-decoration: none;
         }
 
         .cta {
             display: block;
-            margin: 18px auto 10px;
-            padding: 10px 18px;
-            border-radius: 25px;
-            border: none;
-            background: #7c3aed;
-            color: white;
-            font-size: 14px;
+            margin: 15px auto 5px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #e879f9;
+            background: white;
             cursor: pointer;
-            transition: transform 0.3s ease;
+            transition: transform 200ms ease;
         }
 
         .cta:hover {
-            transform: scale(1.06);
+            transform: scale(1.05);
         }
 
         .footer {
             text-align: center;
             font-size: 11px;
-            margin-top: 12px;
-            opacity: 0.75;
+            margin-top: 10px;
+        }
+
+        .main-image {
+            width: 100%;
+            border-radius: 12px;
+            transition: transform 300ms ease, box-shadow 300ms ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-image:hover {
+            transform: scale(1.04) translateY(-8px);
+            box-shadow: 0 22px 45px rgba(0, 0, 0, 0.45);
+            z-index: 15;
+        }
+
+
+        .thumb-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 14px 0 6px;
+            position: relative;
+        }
+
+        .thumb-grid img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 250ms ease, box-shadow 250ms ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .thumb-grid img:hover {
+            transform: scale(1.15) translateY(-10px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+            z-index: 20;
         }
     </style>
 </head>
 
 <body>
-    <button class="theme-btn" id="toggleTheme">Change theme</button>
+    <div class="theme-toggle">
+        <button id="dark-btn">Dark theme</button>
+    </div>
 
     <div class="card">
-        <h1>🎨 Painting</h1>
-        <h2>My favorite creative hobby</h2>
+        <h1>💃 What is Salsa?</h1>
+        <h2>My favorite type of dance</h2>
 
-        <div class="gallery">
-            <img class="main-img" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-                alt="Main painting inspiration" />
+        <img class="main-image"
+            src="https://images.unsplash.com/photo-1555489401-79c274997434?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Salsa dance" />
 
-            <img src="https://images.unsplash.com/photo-1496317899792-9d7dbcd928a1" />
-            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429" />
-            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7" />
-            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7" />
+        <div class="thumb-grid">
+            <img
+                src="https://images.unsplash.com/photo-1635164416977-192869952a6f?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <img
+                src="https://images.unsplash.com/photo-1575217034388-c3048c1965cd?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <img
+                src="https://images.unsplash.com/photo-1597368457044-fd0c441b3038?q=80&w=979&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <img
+                src="https://images.unsplash.com/photo-1736552723714-37a9e57662c9?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
         </div>
 
         <p>
-            <strong>Painting</strong> allows me to express emotions that words cannot.
-            I love playing with colors, textures, and brush strokes to bring my
-            imagination to life on canvas.
+            <strong>Salsa</strong> is a Latin dance, associated with the music genre of the same name, which was first
+            popularized in the United States in the 1960s in New York City. Salsa is an amalgamation of Cuban dances,
+            such as mambo, pachanga and rumba, as well as American dances such as swing and tap.
         </p>
 
-        <a href="https://en.wikipedia.org/wiki/Painting" target="_blank">
-            📘 Read more on Wikipedia
+        <a href="https://en.wikipedia.org/wiki/Salsa_(dance)" target="_blank">
+            📘 Read on Wikipedia
         </a>
 
-        <button class="cta" id="paintBtn">Paint with me</button>
+        <button class="cta">Learn Salsa</button>
 
         <div class="footer">
-            Coded with ❤️ by <strong>Aditi Sonkar</strong>
+            Coded with ❤️ by <a href="#">Aditi Sonkar</a>
         </div>
     </div>
 
     <script>
-        const themeBtn = document.getElementById("toggleTheme");
-        const body = document.body;
-
-        themeBtn.addEventListener("click", () => {
-            body.classList.toggle("dark");
-        });
-
-        document.getElementById("paintBtn").addEventListener("click", () => {
-            let name = prompt("What's your name?");
-            if (name) {
-                alert(
-                    "Thanks " +
-                    name +
-                    "! Let's create something beautiful together 🎨"
-                );
-            }
+        const btn = document.querySelector("#dark-btn");
+        btn.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
         });
     </script>
 </body>
