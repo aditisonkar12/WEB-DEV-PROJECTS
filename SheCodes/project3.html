@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,191 +8,189 @@
 
     <style>
         body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #fde2ff, #e0f2fe);
-      transition: background 0.4s ease, color 0.4s ease;
-      display: flex;
-      justify-content: center;
-      padding: 40px 0;
-    }
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, #fde2ff, #e0f2fe);
+            transition: background 0.4s ease, color 0.4s ease;
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+        }
 
-    body.dark {
-      background: radial-gradient(circle at top, #243b55, #141e30);
-      color: #e5e7eb;
-    }
+        body.dark {
+            background: radial-gradient(circle at top, #243b55, #141e30);
+            color: #e5e7eb;
+        }
 
-    .theme-btn {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 8px 18px;
-      border-radius: 20px;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
-      background: #111;
-      color: #fff;
-    }
+        .theme-btn {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 8px 18px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            background: #111;
+            color: #fff;
+        }
 
-    body.dark .theme-btn {
-      background: #fff;
-      color: #111;
-    }
+        body.dark .theme-btn {
+            background: #fff;
+            color: #111;
+        }
 
-    .card {
-      width: 340px;
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 22px;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
-      transition: background 0.4s ease;
-    }
+        .card {
+            width: 340px;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 22px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+            transition: background 0.4s ease;
+        }
 
-    body.dark .card {
-      background: linear-gradient(160deg, #1e293b, #0f172a);
-    }
+        body.dark .card {
+            background: linear-gradient(160deg, #1e293b, #0f172a);
+        }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 5px;
-    }
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+        }
 
-    h2 {
-      text-align: center;
-      font-size: 14px;
-      font-weight: normal;
-      opacity: 0.8;
-      margin-bottom: 18px;
-    }
+        h2 {
+            text-align: center;
+            font-size: 14px;
+            font-weight: normal;
+            opacity: 0.8;
+            margin-bottom: 18px;
+        }
 
-    .main-image {
-      width: 100%;
-      border-radius: 14px;
-      margin-bottom: 18px;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
+        .main-image {
+            width: 100%;
+            border-radius: 14px;
+            margin-bottom: 18px;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
 
-    .main-image:hover {
-      transform: scale(1.06);
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
-    }
+        .main-image:hover {
+            transform: scale(1.06);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+        }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-bottom: 15px;
-    }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
 
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
 
-    .gallery img:hover {
-      transform: scale(1.18);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
-      z-index: 2;
-    }
+        .gallery img:hover {
+            transform: scale(1.18);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
 
-    p {
-      font-size: 13px;
-      line-height: 1.6;
-      margin-bottom: 12px;
-    }
+        p {
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
 
-    a {
-      color: #7c3aed;
-      font-weight: bold;
-      font-size: 13px;
-      text-decoration: none;
-    }
+        a {
+            color: #7c3aed;
+            font-weight: bold;
+            font-size: 13px;
+            text-decoration: none;
+        }
 
-    .cta {
-      display: block;
-      margin: 18px auto 10px;
-      padding: 10px 18px;
-      border-radius: 25px;
-      border: none;
-      background: #7c3aed;
-      color: white;
-      font-size: 14px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
+        .cta {
+            display: block;
+            margin: 18px auto 10px;
+            padding: 10px 18px;
+            border-radius: 25px;
+            border: none;
+            background: #7c3aed;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
 
-    .cta:hover {
-      transform: scale(1.06);
-    }
+        .cta:hover {
+            transform: scale(1.06);
+        }
 
-    .footer {
-      text-align: center;
-      font-size: 11px;
-      margin-top: 12px;
-      opacity: 0.75;
-    }
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            margin-top: 12px;
+            opacity: 0.75;
+        }
     </style>
 </head>
 
 <body>
-     <button class="theme-btn" id="toggleTheme">Change theme</button>
+    <button class="theme-btn" id="toggleTheme">Change theme</button>
 
-      <div class="card">
-    <h1>🎨 Painting</h1>
-    <h2>My favorite creative hobby</h2>
+    <div class="card">
+        <h1>🎨 Painting</h1>
+        <h2>My favorite creative hobby</h2>
 
-    <img
-      class="main-image"
-      src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-      alt="Painting artwork"
-    />
+        <img class="main-image" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+            alt="Painting artwork" />
 
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1496318447583-f524534e9ce1" />
-      <img src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d" />
-      <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f" />
-      <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde" />
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1496318447583-f524534e9ce1" />
+            <img src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d" />
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f" />
+            <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde" />
+        </div>
+
+        <p>
+            <strong>Painting</strong> allows me to express emotions that words cannot.
+            I love playing with colors, textures, and brush strokes to bring my
+            imagination to life on canvas.
+        </p>
+
+        <a href="https://en.wikipedia.org/wiki/Painting" target="_blank">
+            📘 Read more on Wikipedia
+        </a>
+
+        <button class="cta" id="paintBtn">Paint with me</button>
+
+        <div class="footer">
+            Coded with ❤️ by <strong>Aditi Sonkar</strong>
+        </div>
     </div>
 
-    <p>
-      <strong>Painting</strong> allows me to express emotions that words cannot.
-      I love playing with colors, textures, and brush strokes to bring my
-      imagination to life on canvas.
-    </p>
+    <script>
+        const themeBtn = document.getElementById("toggleTheme");
+        const body = document.body;
 
-    <a href="https://en.wikipedia.org/wiki/Painting" target="_blank">
-      📘 Read more on Wikipedia
-    </a>
+        themeBtn.addEventListener("click", () => {
+            body.classList.toggle("dark");
+        });
 
-    <button class="cta" id="paintBtn">Paint with me</button>
-
-    <div class="footer">
-      Coded with ❤️ by <strong>Aditi Sonkar</strong>
-    </div>
-  </div>
-
-   <script>
-    const themeBtn = document.getElementById("toggleTheme");
-    const body = document.body;
-
-    themeBtn.addEventListener("click", () => {
-      body.classList.toggle("dark");
-    });
-
-    document.getElementById("paintBtn").addEventListener("click", () => {
-      let name = prompt("What's your name?");
-      if (name) {
-        alert(
-          "Thanks " +
-            name +
-            "! Let's create something beautiful together 🎨"
-        );
-      }
-    });
-  </script>
+        document.getElementById("paintBtn").addEventListener("click", () => {
+            let name = prompt("What's your name?");
+            if (name) {
+                alert(
+                    "Thanks " +
+                    name +
+                    "! Let's create something beautiful together 🎨"
+                );
+            }
+        });
+    </script>
 </body>
+
 </html>
