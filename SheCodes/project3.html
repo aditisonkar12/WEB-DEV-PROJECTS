@@ -173,5 +173,25 @@
       Coded with ❤️ by <strong>Aditi Sonkar</strong>
     </div>
   </div>
+
+   <script>
+    const themeBtn = document.getElementById("toggleTheme");
+    const body = document.body;
+
+    themeBtn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+    });
+
+    document.getElementById("paintBtn").addEventListener("click", () => {
+      let name = prompt("What's your name?");
+      if (name) {
+        alert(
+          "Thanks " +
+            name +
+            "! Let's create something beautiful together 🎨"
+        );
+      }
+    });
+  </script>
 </body>
 </html>
