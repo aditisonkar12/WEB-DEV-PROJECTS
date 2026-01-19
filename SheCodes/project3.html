@@ -222,6 +222,21 @@
         btn.addEventListener("click", () => {
             document.body.classList.toggle("dark");
         });
+
+        const learnBtn = document.getElementById("learnPainting");
+
+        learnBtn.addEventListener("click", () => {
+            const name = prompt("What is your name?");
+            if (!name) return;
+
+            const age = prompt("What is your age?");
+            if (!age) return;
+
+            const paintedBefore = prompt("Have you painted before? (Yes / No)");
+            if (!paintedBefore) return;
+
+            alert(`Thanks ${name}! Let's create something beautiful together 🎨`);
+        });
     </script>
 </body>
 
