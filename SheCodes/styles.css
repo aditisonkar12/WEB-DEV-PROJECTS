@@ -8,3 +8,28 @@ img {
   margin: 0 auto;
   display: block;
 }
+
+h2,
+h3 {
+  color: #231d3c;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 900;
+  margin: 0;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.icons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.material-icons {
+  font-size: 36px;
+  margin: 0 10px;
+  color: #8064e9;
+}
